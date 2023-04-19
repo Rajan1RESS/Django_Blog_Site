@@ -1,16 +1,17 @@
 from django.shortcuts import render
 from rest_framework import viewsets, mixins
 from rest_framework import filters
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 from .models import Author, Blog, Country
-from .serializers import AuthorSerializer,BlogSerializer,CountrySerializer,UserSerializer
+from .serializers import AuthorSerializer,BlogSerializer,CountrySerializer
+# ,UserSerializer
 
 
 # Create your views here.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# class UserViewSet(viewsets.ModelViewSet):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
 
 
 class AuthorViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin,

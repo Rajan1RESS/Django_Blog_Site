@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 # Create your models here.
 class Country(models.Model):
@@ -8,7 +8,7 @@ class Country(models.Model):
         return f'{self.name}'
 
 class Author(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.DO_NOTHING,related_name='user')
+    # user = models.OneToOneField(User, null=True, on_delete=models.DO_NOTHING,related_name='user')
     name = models.CharField(max_length=128)
     surname = models.CharField(max_length=100)
     birth_date = models.DateField(null=True)
